@@ -1,0 +1,13 @@
+[Unit]
+Description=iniciar flask al bootear
+# Condiciones para iniciar el servicio después del servicio LLDPD
+Requires=lldpd.service
+After=lldpd.service
+
+[Service]
+ExecStart=/bin/bash /home/ares/boot.sh
+# En caso de algun error/crasheo siempre va a reiniciarse a si mismo
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
