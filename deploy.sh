@@ -1,5 +1,5 @@
 #!/bin/bash
-ch /home/ares
+cd /home/ares
 sudo apt update -y
 sudo apt install lldpd python3 python3-pip python3-dev python3-venv python3-flask -y
 pip install Flask
